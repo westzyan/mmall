@@ -8,7 +8,7 @@
     <properties resource="datasource.properties"></properties>
 
     <!--指定特定数据库的jdbc驱动jar包的位置-->
-    <classPathEntry location="${db.driverLocation}"/>
+    <classPathEntry location="/home/ubuntu2/.m2/repository/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar"/>
 
     <context id="default" targetRuntime="MyBatis3">
 

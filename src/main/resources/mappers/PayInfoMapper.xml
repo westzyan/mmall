@@ -32,8 +32,8 @@
       pay_platform, platform_number, platform_status, 
       create_time, update_time)
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{orderNo,jdbcType=BIGINT}, 
-      #{payPlatform,jdbcType=INTEGER}, #{platformNumber,jdbcType=VARCHAR}, #{platformStatus,jdbcType=VARCHAR},
-            now(), now())
+      #{payPlatform,jdbcType=INTEGER}, #{platformNumber,jdbcType=VARCHAR}, #{platformStatus,jdbcType=VARCHAR}, 
+      now(), now())
   </insert>
   <insert id="insertSelective" parameterType="com.mmall.pojo.PayInfo" >
     insert into mmall_pay_info
