@@ -4,9 +4,6 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by geely
- */
 public class OrderVo {
 
     private Long orderNo;

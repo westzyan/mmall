@@ -4,9 +4,6 @@ import com.github.pagehelper.PageInfo;
 import com.mmall.common.ServerResponse;
 import com.mmall.pojo.Shipping;
 
-/**
- * Created by geely
- */
 public interface IShippingService {
 
     ServerResponse add(Integer userId, Shipping shipping);

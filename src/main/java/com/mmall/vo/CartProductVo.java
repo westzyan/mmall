@@ -2,9 +2,7 @@ package com.mmall.vo;
 
 import java.math.BigDecimal;
 
-/**
- * Created by geely
- */
+
 public class CartProductVo {
 
 //结合了产品和购物车的一个抽象对象
