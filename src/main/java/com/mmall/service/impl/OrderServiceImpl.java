@@ -370,26 +370,6 @@ public class OrderServiceImpl implements IOrderService {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public ServerResponse pay(Long orderNo,Integer userId,String path){
         Map<String ,String> resultMap = Maps.newHashMap();
         Order order = orderMapper.selectByUserIdAndOrderNo(userId,orderNo);
