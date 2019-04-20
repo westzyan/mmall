@@ -296,7 +296,9 @@ public class OrderServiceImpl implements IOrderService {
         Order updateOrder = new Order();
         updateOrder.setId(order.getId());
         updateOrder.setStatus(Const.OrderStatusEnum.CANCELED.getCode());
-
+        //疑问
+        //取消订单，那么一定是创建成功之后在取消的，库存已经减少了，这个没有增加上吧，
+        // 应该遍历订单中产品，然后加上吧啊，这个只是把订单状态修改了
         int row = orderMapper.updateByPrimaryKeySelective(updateOrder);
         if(row > 0){
             return ServerResponse.createBySuccess();
@@ -347,6 +349,9 @@ public class OrderServiceImpl implements IOrderService {
         PageHelper.startPage(pageNum,pageSize);
         List<Order> orderList = orderMapper.selectByUserId(userId);
         List<OrderVo> orderVoList = assembleOrderVoList(orderList,userId);
+
+        //疑问
+        //为何不直接在和构造方法中写orderVoList???
         PageInfo pageResult = new PageInfo(orderList);
         pageResult.setList(orderVoList);
         return ServerResponse.createBySuccess(pageResult);
@@ -548,18 +553,6 @@ public class OrderServiceImpl implements IOrderService {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     //backend
 
     public ServerResponse<PageInfo> manageList(int pageNum,int pageSize){
@@ -611,29 +604,6 @@ public class OrderServiceImpl implements IOrderService {
         }
         return ServerResponse.createByErrorMessage("订单不存在");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
