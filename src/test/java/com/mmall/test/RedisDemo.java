@@ -1,5 +1,6 @@
 package com.mmall.test;
 
+import com.mmall.common.RedisPool;
 import com.mmall.util.RedisPoolUtil;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
@@ -13,11 +14,11 @@ public class RedisDemo {
     public static void main(String[] args) {
 
 
-        Jedis jedis = RedisPoolUtil.getJedis();
+        Jedis jedis = RedisPool.getJedis();
 
         System.out.println(jedis.ping());
 
-        RedisPoolUtil.close(jedis);
+        RedisPool.close(jedis);
     }
 
     /**
@@ -69,7 +70,7 @@ public class RedisDemo {
 
     @Test
     public void t3(){
-        Jedis jedis = RedisPoolUtil.getJedis();
+        Jedis jedis = RedisPool.getJedis();
         String key = "user:1";
         if( jedis.exists(key)){
             Map<String, String> map = jedis.hgetAll(key);
