@@ -1,11 +1,8 @@
 package com.mmall.test;
 
 import com.mmall.common.RedisPool;
-import com.mmall.util.RedisPoolUtil;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
 
 import java.util.Map;
 
