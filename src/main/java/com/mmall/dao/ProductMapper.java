@@ -24,5 +24,7 @@ public interface ProductMapper {
 
     List<Product> selectByNameAndCategoryIds(@Param("productName") String productName, @Param("categoryIdList") List<Integer> categoryIdList);
 
+    //这里一定用Integer ,如果删除了产品，则返回null
+    Integer selectStockByProductId(Integer id);
 
 }
