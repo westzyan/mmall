@@ -29,7 +29,7 @@ public class CloseOrderTask {
         log.info("关闭订单定时任务结束");
     }
 
-//    @Scheduled(cron = "0 */1 * * * ?")//每一分钟
+    @Scheduled(cron = "0 */1 * * * ?")//每一分钟
     public void closeOrderTaskV2(){
         log.info("关闭订单定时任务启动");
         long lockTimeout = Long.parseLong(PropertiesUtil.getProperty("lock.timeout","5000"));
@@ -37,7 +37,7 @@ public class CloseOrderTask {
 
         if (setnxResult != null && setnxResult.intValue() == 1){
             //如果 返回值1 代表设置成功，获取锁
-            closeOrder(Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK);
+//            closeOrder(Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK);
         }else {
             log.info("没有获得分布式锁：{}",Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK);
         }
