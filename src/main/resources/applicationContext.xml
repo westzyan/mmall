@@ -21,7 +21,7 @@
     <context:property-placeholder location="classpath:datasource.properties"/>
 
     <task:annotation-driven/>
-
+    <!--http://www.springframework.org/schema/task-->
 
     <import resource="applicationContext-datasource.xml"/>
     <!--<import resource="applicationContext-spring-session.xml"/>-->

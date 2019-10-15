@@ -28,5 +28,10 @@ public class BigDecimalTest {
 
         System.out.println(b1.add(b2));
     }
+    @Test
+    public void test4(){
+        double a = 5/2;
+        System.out.println(a);
+    }
 
 }
