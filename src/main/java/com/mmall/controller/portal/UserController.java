@@ -32,7 +32,7 @@ public class UserController {
      * @param session
      * @return
      */
-    @RequestMapping(value = "login.do", method = RequestMethod.GET)
+    @RequestMapping(value = "login.do", method = RequestMethod.POST)
     @ResponseBody
     public ServerResponse<User> login(String username, String password, HttpSession session, HttpServletResponse httpServletResponse){
         //service > mybatis > dao
