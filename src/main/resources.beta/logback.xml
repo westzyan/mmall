@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
 
-    <property name="LOG_HOME" value="${CATALINA_HOME}/logs"></property>
+    <property name="LOG_HOME" value="${CATALINA_HOME}/logs">
+
+    </property>
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoding>UTF-8</encoding>
         <encoder>
